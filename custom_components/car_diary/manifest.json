@@ -1,0 +1,12 @@
+{
+  "domain": "car_diary",
+  "name": "Car Diary",
+  "codeowners": ["@simonzhekoff"],
+  "config_flow": true,
+  "documentation": "https://github.com/simonzhekoff/cardiary-ha",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/simonzhekoff/cardiary-ha/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

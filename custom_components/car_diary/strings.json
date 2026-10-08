@@ -1,0 +1,82 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Car Diary account",
+        "description": "Sign in with the email and password you use at car-diary.net. Only the session token is stored.",
+        "data": {
+          "email": "Email",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Sign in to Car Diary again",
+        "description": "The session for {email} is no longer accepted.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The email or password was rejected.",
+      "cannot_connect": "Car Diary could not be reached."
+    },
+    "abort": {
+      "already_configured": "This account is already set up.",
+      "reauth_successful": "Signed in again.",
+      "unique_id_mismatch": "That is a different Car Diary account."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "mileage": {
+        "name": "Mileage"
+      },
+      "average_consumption": {
+        "name": "Average consumption"
+      },
+      "last_refuel": {
+        "name": "Last refuel"
+      },
+      "last_refuel_volume": {
+        "name": "Last refuel volume"
+      },
+      "last_refuel_cost": {
+        "name": "Last refuel cost"
+      },
+      "last_fuel_price": {
+        "name": "Last fuel price"
+      },
+      "fuel_cost_this_month": {
+        "name": "Fuel cost this month"
+      },
+      "expenses_this_year": {
+        "name": "Expenses this year"
+      },
+      "last_repair": {
+        "name": "Last repair"
+      },
+      "next_reminder": {
+        "name": "Next reminder"
+      },
+      "warranty_until": {
+        "name": "Warranty until"
+      },
+      "vignette_expires": {
+        "name": "Vignette expires"
+      },
+      "annual_insurance_expires": {
+        "name": "Liability insurance expires"
+      },
+      "additional_insurance_expires": {
+        "name": "Casco insurance expires"
+      },
+      "technical_review_expires": {
+        "name": "Technical inspection expires"
+      },
+      "car_tax_expires": {
+        "name": "Vehicle tax due"
+      }
+    }
+  }
+}

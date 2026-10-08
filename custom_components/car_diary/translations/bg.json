@@ -1,0 +1,82 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Профил в Car Diary",
+        "description": "Влез с имейла и паролата си за car-diary.net. Пази се само токенът на сесията.",
+        "data": {
+          "email": "Имейл",
+          "password": "Парола"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Влез отново в Car Diary",
+        "description": "Сесията за {email} вече не се приема.",
+        "data": {
+          "password": "Парола"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Имейлът или паролата бяха отхвърлени.",
+      "cannot_connect": "Няма връзка с Car Diary."
+    },
+    "abort": {
+      "already_configured": "Този профил вече е добавен.",
+      "reauth_successful": "Входът е подновен.",
+      "unique_id_mismatch": "Това е друг профил в Car Diary."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "mileage": {
+        "name": "Километраж"
+      },
+      "average_consumption": {
+        "name": "Среден разход"
+      },
+      "last_refuel": {
+        "name": "Последно зареждане"
+      },
+      "last_refuel_volume": {
+        "name": "Последно зареждане – литри"
+      },
+      "last_refuel_cost": {
+        "name": "Последно зареждане – цена"
+      },
+      "last_fuel_price": {
+        "name": "Последна цена на горивото"
+      },
+      "fuel_cost_this_month": {
+        "name": "Гориво този месец"
+      },
+      "expenses_this_year": {
+        "name": "Разходи тази година"
+      },
+      "last_repair": {
+        "name": "Последен ремонт"
+      },
+      "next_reminder": {
+        "name": "Следващо напомняне"
+      },
+      "warranty_until": {
+        "name": "Гаранция до"
+      },
+      "vignette_expires": {
+        "name": "Винетка до"
+      },
+      "annual_insurance_expires": {
+        "name": "Гражданска отговорност до"
+      },
+      "additional_insurance_expires": {
+        "name": "Каско до"
+      },
+      "technical_review_expires": {
+        "name": "ГТП до"
+      },
+      "car_tax_expires": {
+        "name": "Данък МПС до"
+      }
+    }
+  }
+}
