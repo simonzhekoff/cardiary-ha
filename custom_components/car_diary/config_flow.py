@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
+import logging
 from typing import Any
 
 import voluptuous as vol
@@ -12,6 +13,8 @@ from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
 from .api import CarDiaryAuthError, CarDiaryClient, CarDiaryError
 from .const import CONF_TOKEN, CONF_USER_ID, DOMAIN
+
+_LOGGER = logging.getLogger(__name__)
 
 
 class CarDiaryConfigFlow(ConfigFlow, domain=DOMAIN):
@@ -27,7 +30,8 @@ class CarDiaryConfigFlow(ConfigFlow, domain=DOMAIN):
             )
         except CarDiaryAuthError:
             errors["base"] = "invalid_auth"
-        except CarDiaryError:
+        except CarDiaryError as err:
+            _LOGGER.error("Car Diary login failed: %s", err)
             errors["base"] = "cannot_connect"
         return None
 

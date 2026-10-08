@@ -45,7 +45,9 @@ class CarDiaryClient:
             auth=False,
         )
         if not isinstance(user, dict) or not user.get("api_token"):
-            raise CarDiaryError("Login answered without a token")
+            # Names only, the values may be personal.
+            shape = sorted(user) if isinstance(user, dict) else type(user).__name__
+            raise CarDiaryError(f"Login answered without a token: {shape}")
         self._token = user["api_token"]
         return user
 
