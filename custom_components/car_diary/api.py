@@ -44,6 +44,9 @@ class CarDiaryClient:
             json={"email": email, "password": password, "source": "web"},
             auth=False,
         )
+        # Like the lists, the user record comes wrapped in "data".
+        if isinstance(user, dict) and isinstance(user.get("data"), dict):
+            user = user["data"]
         if not isinstance(user, dict) or not user.get("api_token"):
             # Names only, the values may be personal.
             shape = sorted(user) if isinstance(user, dict) else type(user).__name__
