@@ -287,6 +287,13 @@ class CarDiarySensor(CoordinatorEntity[CarDiaryCoordinator], SensorEntity):
         return super().available and self._car_id in self.coordinator.data
 
     @property
+    def entity_picture(self) -> str | None:
+        """The car's photo, on the sensor that stands for the car itself."""
+        if self.entity_description.key != "mileage":
+            return None
+        return self.coordinator.data[self._car_id].car.get("final_image") or None
+
+    @property
     def native_value(self) -> StateType | date:
         return self.entity_description.value_fn(
             self.coordinator.data[self._car_id], self.coordinator.today()

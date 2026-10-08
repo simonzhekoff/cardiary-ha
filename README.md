@@ -14,7 +14,7 @@ Each car in your account becomes a device with:
 
 | Sensor | Notes |
 |---|---|
-| Mileage | |
+| Mileage | the car's photo from Car Diary as the entity picture |
 | Average consumption | L/100 km, as Car Diary calculates it |
 | Last refuel | date; station, fuel, mileage and full-tank flag as attributes |
 | Last refuel volume / cost, last fuel price | |
